@@ -1,8 +1,10 @@
 import React from 'react';
+
+import 'normalize.css';
 import './main.scss';
 
 const MainContainer = () => (
-  <p>I'm the main app!</p>
+  <div>I'm the main app!</div>
 );
 
 export default MainContainer;

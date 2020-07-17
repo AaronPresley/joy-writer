@@ -1,11 +1,11 @@
 module.exports = [
   {
-    test: /\.scss$/,
-    loaders: [
-      "style-loader",
-      "css-loader",
-      "sass-loader"
-    ]
+    test: /\.s?css$/i,
+    use: [
+      'style-loader',
+      'css-loader',
+      'sass-loader',
+    ],
   },
   {
     test: /\.tsx?$/,
