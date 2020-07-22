@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import 'normalize.css';
-import './main.scss';
+import "normalize.css";
+import "./main.scss";
 
-const MainContainer = () => (
-  <div>I'm the main app!</div>
-);
+import WritingContainer from "../writing/writing";
+
+const MainContainer = () => <WritingContainer />;
 
 export default MainContainer;

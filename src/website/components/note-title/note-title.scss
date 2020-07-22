@@ -1,0 +1,21 @@
+.note-title-container {
+  display: inline-block;
+
+  h1 {
+    border: transparent solid 1px;
+    border-radius: 3px;
+    margin: 0;
+    padding: 4px 10px 4px 0;
+
+    &:hover {
+      border-color:#DDD;
+      cursor: pointer;
+    }
+  }
+
+  input {
+    box-sizing: content-box;
+    padding: 10px 10px;
+    width: 100%;
+  }
+}

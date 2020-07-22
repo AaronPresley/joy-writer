@@ -14,6 +14,7 @@
     "@types/react-dom": "^16.9.8",
     "css-loader": "^3.6.0",
     "electron": "^9.1.0",
+    "electron-react-devtools": "^0.5.3",
     "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.2",
@@ -27,6 +28,7 @@
   "dependencies": {
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "rxjs": "^6.6.0"
   }
 }

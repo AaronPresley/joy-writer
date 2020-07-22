@@ -1,0 +1,10 @@
+.note-input-container {
+  .text-input {
+    font-size: 18px;
+    line-height: 27px;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+}

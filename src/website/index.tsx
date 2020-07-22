@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import MainContainer from './containers/main/main';
+import { MainContainer } from './containers';
 
 ReactDOM.render(
   <MainContainer />,
