@@ -1,0 +1,23 @@
+.sidebar-container {
+  min-width: 200px;
+  border-right: #DDD solid 1px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      span[role="link"] {
+        display: block;
+        padding: 8px 10px;
+      }
+
+      &.active {
+        span {
+          background-color: #EFEFEF;
+        }
+      }
+    }
+  }
+}

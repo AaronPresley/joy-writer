@@ -1,13 +1,16 @@
-<style>
-  .hi {
-    background-color: green;
+<style type="text/scss">
+  .writing-container {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
   }
 </style>
 
 <script lang="ts">
-  export let type:string = 'writing'
+  import { Sidebar, NoteEditor } from '../components';
 </script>
 
-<div class="hi">
-  <p>Hi, I'm the { type } container</p>
+<div class="writing-container">
+  <Sidebar />
+  <NoteEditor />
 </div>

@@ -1,10 +1,9 @@
 <style type="text/scss">
-  $color: green;
-  .thing {
-    background-color: $color;
-  }
+  @import "./App.scss";
 </style>
 
-<div class="thing">
-  Hi there my name is Aaron
-</div>
+<script lang="ts">
+  import Writing from './containers/Writing.svelte';
+</script>
+
+<Writing />

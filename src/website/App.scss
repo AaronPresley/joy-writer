@@ -1,0 +1,15 @@
+:global(html) {
+  height: 100vh;
+}
+
+:global(body) {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+:global(a, span[role="link"]) {
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
+}
