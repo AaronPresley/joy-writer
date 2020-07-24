@@ -1,5 +1,10 @@
-<script>
-  import WritingContainer from './containers/Writing.svelte';
-</script>
+<style type="text/scss">
+  $color: green;
+  .thing {
+    background-color: $color;
+  }
+</style>
 
-<WritingContainer />
+<div class="thing">
+  Hi there my name is Aaron
+</div>
