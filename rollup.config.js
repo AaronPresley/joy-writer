@@ -6,7 +6,6 @@ import typescript from '@rollup/plugin-typescript';
 
 import copy from 'rollup-plugin-copy'
 
-
 const production = !process.env.ROLLUP_WATCH;
 
 const baseConfig = {
@@ -38,7 +37,8 @@ export default [
     ...baseConfig,
     input: 'src/website/index.ts',
     output: {
-      file: 'out/website/index.js'
+      file: 'out/website/index.js',
+      sourcemap: true,
     },
     plugins: [
       ...baseConfig.plugins,

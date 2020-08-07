@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const os = require("os");
 const path = require("path");
 
@@ -11,4 +11,8 @@ app.on("ready", () => {
 
   // load a website to display
   window.loadURL(`file://${__dirname}/../website/index.html`);
+
+  ipcMain.on("some-example", (event: any, args: any) => {
+    console.log(`some-example!`, event, args);
+  });
 });
