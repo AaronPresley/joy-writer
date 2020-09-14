@@ -1,7 +1,7 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
 import { ipcRenderer } from 'electron';
-import { SetStorageCredsContainer } from './containers';
-import useDataTargetStore from './wstate/data-target-state';
+import { SetStorageCredsContainer, SetStorageDirContainer } from './containers';
+import useStorageTargetStore from './wstate/storage-target-state';
 
 import 'normalize.css';
 // https://getbootstrap.com/docs/4.0/layout/grid/
@@ -11,21 +11,20 @@ import './app.scss';
 
 export const App: FunctionComponent = () => {
   const [isWaiting, setIsWaiting] = useState<boolean>(true);
-  const { hasStorageCredentials, hasStorageDirectory, setFromEvent } = useDataTargetStore();
+  const { hasCredentials, hasDirectory, pullFromMain } = useStorageTargetStore();
 
-  ipcRenderer.on('store-data', (event, storeData) => {
-    setIsWaiting(false);
-    setFromEvent({ ...storeData })
-  });
+  useEffect(() => {
+    pullFromMain().then(() => setIsWaiting(false))
+  }, []);
 
   if (isWaiting)
     return <>Waiting...</>;
 
-  if (!hasStorageCredentials)
+  if (!hasCredentials)
     return <SetStorageCredsContainer />
 
-  if (!hasStorageDirectory)
-    return <>diiir</>
+  if (!hasDirectory)
+    return <SetStorageDirContainer />
 
   return (
     <>hello, world</>
