@@ -13,6 +13,4 @@ app.on("ready", () => {
 
   // load a website to display
   window.loadURL(`file://${__dirname}/../website/index.html`);
-
-  console.log(store.s3Key);
 });

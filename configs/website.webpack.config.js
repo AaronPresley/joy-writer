@@ -6,11 +6,21 @@ module.exports = {
 
   devtool: 'source-map',
 
-  entry: path.resolve('./src/website/index.ts'),
+  entry: path.resolve('./src/website/index.tsx'),
 
   output: {
     filename: 'index.js',
     path: path.resolve('./out/website'),
+  },
+  
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+    ],
   },
 
   resolve: {
