@@ -1,6 +1,8 @@
-const { app, BrowserWindow } = require("electron");
 const os = require("os");
 const path = require("path");
+const { app, BrowserWindow } = require("electron");
+
+const { store } = require("./store");
 
 app.on("ready", () => {
   // once electron has started up, create a window.
@@ -11,4 +13,6 @@ app.on("ready", () => {
 
   // load a website to display
   window.loadURL(`file://${__dirname}/../website/index.html`);
+
+  console.log(store.s3Key);
 });
