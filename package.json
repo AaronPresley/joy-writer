@@ -29,6 +29,7 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "aws-sdk": "^2.752.0",
     "bootstrap": "^4.5.2",
     "electron-store": "^6.0.0",
     "immer": "^7.0.9",

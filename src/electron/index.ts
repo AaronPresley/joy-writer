@@ -1,5 +1,5 @@
 import { app, BrowserWindow, ipcMain } from "electron";
-import { useStorageTargetState } from "./estate/storage-target";
+import "./s3";
 
 app.on("ready", () => {
   // once electron has started up, create a window.
@@ -16,9 +16,4 @@ app.on("ready", () => {
 
   // load a website to display
   window.loadURL(`file://${__dirname}/../website/index.html`);
-
-  useStorageTargetState();
-
-  // Triggered by React once it's ready to rock
-  ipcMain.on("website-ready", (event, arg) => {});
 });
