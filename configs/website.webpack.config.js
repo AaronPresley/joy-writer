@@ -15,10 +15,14 @@ module.exports = {
   
   module: {
     rules: [
+      ...require('./shared-modules'),
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        test: /\.s?css$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
       },
     ],
   },
@@ -26,6 +30,8 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+
+  target: 'electron-renderer',
 
   plugins: [
     new HtmlWebpackPlugin({

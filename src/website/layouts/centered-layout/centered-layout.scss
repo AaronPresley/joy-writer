@@ -1,0 +1,16 @@
+.centered-layout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+
+  .content {
+    background-color: #fff;
+    border-radius: 5px;
+    border: #d1d1d1 solid 1px;
+    min-width: 500px;
+    padding: 15px;
+  }
+}
